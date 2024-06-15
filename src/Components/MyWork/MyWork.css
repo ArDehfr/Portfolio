@@ -1,0 +1,104 @@
+.mywork{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.container-mywork::after,
+.container-mywork::before {
+    content: " ";
+    width: 28rem;
+    height: 28rem;
+    border-radius: 28rem;
+    background: #5636af;
+    position: absolute;
+    z-index: -1;
+    filter: blur(230px);
+}
+
+.container-mywork::after {
+    top: 90rem;
+    left: 0rem;
+}
+
+.container-mywork::before {
+    background: #44c5cc;
+    bottom: 50rem;
+    right: 0rem;
+}
+.mywork-title{
+    position: relative;
+}
+.menu-itemmm{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-itemmm::before{
+    content: " ";
+    width: 100%;
+    height: 0.2rem;
+    background: linear-gradient(90deg, #44c5cc 0%, #2672a5 100%);
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: -0.6rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s ease;
+}
+
+.menu-itemmm:hover::before{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+.mywork-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+}
+.mywork-container img {
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 370px;
+    height: 231px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.mywork-container img:hover {
+    transform: scale(1.10);
+    border: 4px solid #44c5cc;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+@media (max-width:768px) {
+    .mywork{
+        gap: 5px;
+        margin: 50px 70px;
+        align-items: start;
+    }
+    .mywork-title a {
+        padding: 0;
+        font-size: 50;
+    }
+    .mywork-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .mywork-container img {
+        width: 100%;
+        height: 100%;
+    }
+}

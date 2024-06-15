@@ -1,0 +1,231 @@
+.hero-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 10s linear;
+    }
+}
+
+.cv-btn {
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(90deg, #44c5cc 0%, #2672a5 100%);
+    padding: 0.8rem 2rem;
+    border: none;
+    outline: 1.5px solid transparent;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.cv-btn:hover {
+    color: #3FC1C9;
+    background: #000;
+    outline: 1.5px solid #3FC1C9;
+}
+
+.span {
+    background: linear-gradient(90deg, #6ef0f7 0%, #5fade0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-container::after,
+.hero-container::before {
+    content: " ";
+    width: 26.125rem;
+    height: 26.125rem;
+    border-radius: 26.125rem;
+    background: #3FC1C9;
+    position: absolute;
+    z-index: -1;
+    filter: blur(225px);
+}
+
+.hero-container::after {
+    background: #158161;
+    top: -3rem;
+    left: -5rem;
+}
+
+.hero-container::before {
+    bottom: 2rem;
+    right: 0rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 3.8rem;
+    font-weight: 600;
+    line-height: 5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.hero-img {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.hero-img>div {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.hero-img>div>img {
+    width: 25rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.tech-icon {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.65rem;
+    border: 1.5px solid #3FC1C9;
+}
+
+.tech-icon2 {
+    font-size: 20px;
+    font-weight: 600;
+    width: 7.5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.65rem;
+    border: 1.5px solid #3FC1C9;
+}
+
+.tech-icon img {
+    width: 3.5rem;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.hero-img>div>img:hover,
+.tech-icon img:hover {
+    transform: translateY(-0.5rem);
+}
+
+@media (max-width: 1025px) {
+    .hero-content h2 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .hero-img>div>img {
+        width: 20rem;
+    }
+
+    .tech-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .tech-icon img {
+        width: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        margin: 2rem 0 2rem 0;
+    }
+
+    .hero-container h2 {
+        margin-top: 3rem;
+    }
+
+    .hero-content h2,
+    .hero-content p {
+        width: auto;
+        text-align: center;
+    }
+
+    .hero-container::after,
+    .hero-container::before {
+        content: " ";
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .hero-container::after {
+        top: 0rem;
+        left: 0rem;
+    }
+
+    .hero-container::before {
+        bottom: 2rem;
+        right: 0rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h2 {
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+
+    .hero-img {
+        gap: 1rem;
+    }
+
+    .hero-img>div {
+        gap: 1rem;
+    }
+
+    .hero-img>div>img {
+        width: 16rem;
+    }
+
+    .tech-icon {
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
+    .tech-icon img {
+        width: 2rem;
+    }
+}
